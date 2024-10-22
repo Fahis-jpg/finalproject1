@@ -1,0 +1,454 @@
+public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+        
+        int jumlah = 0, pilihmenu, pilihsubmenu, kartumember, pilihprogram, pilih1, pilih2 = 0;
+        int hargasotoayam=13000, hargasotodaging=15000, hargasotocampur=18000;
+        int hargapecellele=6000, hargapecelayam=8000;
+        int hargaayambiasa=10000, hargaayamkemangi=12000, hargaayamserundeng=11000;
+        int hargaestehjumbo=5000, hargaestehbiasa=3000, hargaesjerukjumbo=5000, hargaesjerukbiasa=4000;
+        double bayar, kembalian;
+        
+        double harga = 0, diskon, totalakhir= 0, total=0;
+        do{
+        System.out.println("WARUNG BU KASANAH\nMenerima pesanan\nDiskon setiap hari Jumat");
+        System.out.println("==============================================");
+        System.out.println("1. Kasir");
+        System.out.println("2. Admin");
+        System.out.println("3. Owner");
+        System.out.println("4. Exit");
+        System.out.print("pilih:");
+        pilihprogram=input.nextInt();
+        System.out.println("==============================================");
+        
+        switch (pilihprogram){
+            case 1:
+                do{
+                System.out.println("---KASIR---");
+                System.out.println("DAFTAR MENU");
+                System.out.println("==MAKANAN==");
+                System.out.println("1. Soto");
+                System.out.println("2. Pecel");
+                System.out.println("3. Ayam");
+                System.out.println("==MINUMAN==");
+                System.out.println("4. Es Teh");
+                System.out.println("5. Es Jeruk");
+                System.out.println("6. Susu");
+                System.out.println("7. Selesai");
+                System.out.print("pilih menu:");
+                pilih1=input.nextInt();
+                System.out.println("==============================================");
+                   switch(pilih1){
+                       case 1:
+                           System.out.println("SOTO");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Ayam    : Rp."+hargasotoayam);
+                           System.out.println("2. Daging  : Rp."+hargasotodaging);
+                           System.out.println("3. Campur  : Rp."+hargasotocampur);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                                if(pilihsubmenu==1){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargasotoayam;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargasotodaging;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                    
+                                }else if(pilihsubmenu==3){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargasotocampur;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");}else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 2:
+                           System.out.println("PECEL");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Biasa        : Rp."+hargapecellele);
+                           System.out.println("2. Tambah telur : Rp."+hargapecelayam);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                           
+                                if(pilihsubmenu==1){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargapecellele;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargapecelayam;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                   System.out.println("==============================================");
+                                    
+                                    
+                                }else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 4:
+                           System.out.println("Es Teh");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Jumbo :"+hargaestehjumbo);
+                           System.out.println("2. Biasa :"+hargaestehbiasa);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                          
+                                if(pilihsubmenu==1){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaestehjumbo;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaestehbiasa;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                    
+                                }else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 3:
+                           System.out.println("AYAM");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. biasa    : Rp."+hargaayambiasa);
+                           System.out.println("2. serundeng: Rp."+hargaayamserundeng);
+                           System.out.println("3. kemangi  : Rp."+hargaayamkemangi);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                            if(pilihsubmenu==1){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaayambiasa;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaayamserundeng;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                    
+                                }else if(pilihsubmenu==3){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaayamkemangi;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");}
+                                else {
+                                    System.out.println("hasil tidak ditemukan");
+                                    
+                                  
+                                        }
+                           break;
+                       case 5:
+                           System.out.println("ES JERUK");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Jumbo : Rp."+hargaesjerukjumbo);
+                           System.out.println("2. Biasa : Rp."+hargaesjerukbiasa);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                          
+                                if(pilihsubmenu==1){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaesjerukjumbo;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaesjerukbiasa;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                    
+                                }else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 6:
+                           System.out.println("SUSU");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Dingin : Rp."+hargaestehjumbo);
+                           System.out.println("2. Biasa  : Rp."+hargaestehbiasa);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                          
+                                if(pilihsubmenu==1){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaestehjumbo;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("jumlah:");
+                                    jumlah=input.nextInt();
+                                    total=jumlah*hargaestehbiasa;
+                                    totalakhir=totalakhir+total;
+                                    System.out.println("Total: Rp."+total);
+                                    System.out.println("==============================================");
+                                    
+                                }else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                           
+                       case 7:
+                           System.out.println("Selesai memilih menu");
+                           break;
+                       
+                       default: System.out.println("menu tidak ditemukan");   
+                          
+                           }
+                      }while(pilih1!=7);
+                
+                
+                System.out.println("Total harga: Rp."+totalakhir);
+                 
+                System.out.println();
+                System.out.println("Apakah Hari ini Jumat?");
+                System.out.println("1. Ya\n2. Tidak");
+                System.out.print("Pilih:");
+                kartumember = input.nextInt();
+        
+                System.out.println();
+                System.out.println("===============================================");
+                System.out.println();
+        
+              if (kartumember == 1){
+                 System.out.println("Anda Mendapatkan Diskon Sebesar 5%");
+                 diskon = 0.05 * totalakhir;
+                 System.out.println("Diskon      : Rp." + diskon);
+                 total = totalakhir - diskon;
+                 System.out.println("Total Akhir : Rp." + total);
+                 System.out.println();
+                 System.out.print("Paid     : Rp.");
+                 bayar=input.nextInt();
+                 kembalian=bayar-total;
+                 System.out.println("kembalian: Rp."+kembalian);
+            } else if (kartumember == 2){
+                 System.out.println("Anda Tidak Mendapatkan Diskon");
+                 diskon = 0 * totalakhir;
+                 total = totalakhir - diskon;
+                 System.out.println("Diskon      : Rp." + diskon);
+                 System.out.println("Total Akhir : Rp." + total);
+                 System.out.println();
+                 System.out.print("Paid     : Rp.");
+                 bayar=input.nextInt();
+                 kembalian=bayar-total;
+                 System.out.println("kembalian: Rp."+kembalian);
+            } else {
+                 System.out.println("Jawaban Anda Tidak Valid");
+            }
+                 System.out.println();
+                 System.out.println("=================terima kasih=================");
+                 System.out.println("=====Semoga Anda Puas Dengan Masakan Kami=====");
+                break;
+            
+            case 2:
+                System.out.println("---ADMIN---");
+                System.out.println("pilih daftar menu yang diubah");
+                System.out.println("==MAKANAN==");
+                System.out.println("1. Soto");
+                System.out.println("2. Pecel");
+                System.out.println("3. Ayam");
+                System.out.println("==MINUMAN==");
+                System.out.println("4. Es Teh");
+                System.out.println("5. Es Jeruk");
+                System.out.println("6. Susu");
+                System.out.println("7. Selesai");
+                System.out.print("pilih menu:");
+                pilih2=input.nextInt();
+                   switch(pilih2){
+                       case 1:
+                           System.out.println("SOTO");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Ayam    : Rp."+hargasotoayam+"perporsi");
+                           System.out.println("2. Daging  : Rp."+hargasotodaging+"perporsi");
+                           System.out.println("3. Campur  : Rp."+hargasotocampur+"perporsi");
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                                if(pilihsubmenu==1){
+                                    System.out.print("harga baru: Rp.");
+                                    hargasotoayam=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("harga baru: Rp.");
+                                    hargasotodaging=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==3){
+                                    System.out.print("harga baru: Rp.");
+                                    hargasotocampur=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                } else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 2:
+                           System.out.println("PECEL");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Biasa        : Rp."+hargapecellele);
+                           System.out.println("2. Tambah telur : Rp."+hargapecelayam);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                                if(pilihsubmenu==1){
+                                    System.out.print("harga baru: Rp.");
+                                    hargapecellele=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("harga baru: Rp.");
+                                    hargapecelayam=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                    
+                                }else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 4:
+                           System.out.println("Es Teh");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Jumbo    : Rp."+hargaestehjumbo);
+                           System.out.println("2. Biasa    : Rp."+hargaestehbiasa);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                                if(pilihsubmenu==1){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaestehjumbo=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaestehbiasa=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 3:
+                           System.out.println("AYAM");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. biasa    : Rp."+hargaayambiasa);
+                           System.out.println("2. serundeng: Rp."+hargaayamserundeng);
+                           System.out.println("3. kemangi  : Rp."+hargaayamkemangi);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                           if(pilihsubmenu==1){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaayambiasa=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaayamserundeng=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==3){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaayamkemangi=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                } else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 5:
+                           System.out.println("ES JERUK");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Jumbo    : Rp."+hargaesjerukjumbo);
+                           System.out.println("2. Biasa    : Rp."+hargaesjerukbiasa);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                           if(pilihsubmenu==1){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaesjerukjumbo=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaesjerukbiasa=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==3){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaayamkemangi=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                } else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           break;
+                       case 6:
+                           System.out.println("SUSU");
+                           System.out.println("daftar submenu");
+                           System.out.println("1. Dingin    : Rp."+hargaestehjumbo);
+                           System.out.println("2. Biasa     : Rp."+hargaestehbiasa);
+                           System.out.print("pilih sub menu:");
+                           pilihsubmenu=input.nextInt();
+                           if(pilihsubmenu==1){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaestehjumbo=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else if(pilihsubmenu==2){
+                                    System.out.print("harga baru: Rp.");
+                                    hargaestehbiasa=input.nextInt();
+                                    System.out.println("Sukses");
+                                    System.out.println();
+                                }else {
+                                    System.out.println("hasil tidak ditemukan");
+                                }
+                           
+                           break;
+                       case 7:
+                           System.out.println("Selesai merubah harga menu");
+                           break;
+                       default: System.out.println("terima kasih");   
+                        }
+                     break;
+             case 3: 
+                System.out.println("---OWNER---");
+                System.out.println("---LIHAT PEMASUKAN---");
+                 System.out.println();
+                System.out.println("Total pemasukan: Rp."+total);
+                 System.out.println();
+                break;
+            case 4:
+                System.out.println("=================terima kasih=================");
+                System.out.println("=====Semoga Anda Puas Dengan Masakan Kami=====");
+                break;
+            default: System.out.println("pilihan tidak ada");
+        
+        }
+        }while(pilihprogram!=4);
+    }
+}
